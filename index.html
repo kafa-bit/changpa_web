@@ -120,19 +120,24 @@
             <dd>1995년 5월</dd>
           </div>
           <div>
-            <dt>대표</dt>
+            <dt>지향</dt>
+            <dd>실험 연극</dd>
+          </div>
+          <div>
+            <dt>예술감독</dt>
             <dd>채승훈</dd>
           </div>
           <div>
-            <dt>지향</dt>
-            <dd>실험 연극</dd>
+            <dt>대표</dt>
+            <dd>나수아</dd>
           </div>
         </dl>
       </section>
 
       <section class="statement" aria-label="창파의 무대 언어">
         <blockquote>
-          몸과 오브제가 남긴 장면으로 감각을 다시 깨운다.
+          몸과 오브제가 남긴 장면,<br />
+          감각을 다시 깨운다.
         </blockquote>
       </section>
 
@@ -454,11 +459,11 @@
         <div class="actor-stage">
           <div class="actor-intro">
             <figure class="actor-art">
-              <img
-                src="./images/actor.png"
-                alt="벽에 드리운 배우의 그림자와 ACTOR 타이포그래피"
-                loading="lazy"
-              />
+              <p class="art-eyebrow">ACTOR</p>
+              <div class="art-copy">
+                <h3 class="art-title">창파와 함께 한 배우</h3>
+                <p class="art-note">1995년부터 지금까지, 함께한 이름들</p>
+              </div>
             </figure>
             <div class="actors-console" role="group" aria-label="창파 출연 기록 콘솔">
               <button
@@ -489,6 +494,7 @@
               <li>김뢰하</li>
               <li>김미진</li>
               <li>김소미</li>
+              <li>김수지</li>
               <li>김영훈</li>
               <li>김은석</li>
               <li>김지언</li>
@@ -501,6 +507,7 @@
               <li>김호정</li>
               <li>나수아</li>
               <li>남명렬</li>
+              <li>문경태</li>
               <li>문채희</li>
               <li>민경진</li>
               <li>박빛재환</li>
@@ -511,12 +518,14 @@
               <li>방영</li>
               <li>소준성</li>
               <li>소희정</li>
+              <li>손봉숙</li>
               <li>신서호</li>
               <li>심철종</li>
               <li>오민애</li>
-              <li>오준범</li>
+              <li>오훈서</li>
               <li>우영민</li>
               <li>우태식</li>
+              <li>윤복인</li>
               <li>이경준</li>
               <li>이명호</li>
               <li>이예은</li>
@@ -533,6 +542,7 @@
               <li>정재진</li>
               <li>조수아</li>
               <li>주세종</li>
+              <li>최윤석</li>
               <li>하경화</li>
               <li>한동희</li>
               <li>한지훈</li>
@@ -546,11 +556,10 @@
 
       <section class="world-port" aria-label="해외 초청 공연">
         <figure class="world-port-art">
-          <img
-            src="./images/tour.png"
-            alt="비행기 그림자와 TOUR 타이포그래피"
-            loading="lazy"
-          />
+          <p class="art-eyebrow">TOUR</p>
+          <div class="art-copy">
+            <h3 class="art-title">해외 초청 공연</h3>
+          </div>
         </figure>
         <div class="world-console" role="group" aria-label="해외 공연 자료 콘솔">
           <button
@@ -558,6 +567,28 @@
             type="button"
             aria-pressed="false"
             aria-label="해외 공연 자료 페이지 켜기"
+          >
+            <span class="switch-slider" aria-hidden="true"></span>
+            <span class="switch-on" aria-hidden="true">ON</span>
+            <span class="switch-off" aria-hidden="true">OFF</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="book-port" aria-label="채승훈 희곡집">
+        <figure class="book-port-art">
+          <p class="art-eyebrow">BOOK</p>
+          <div class="art-copy">
+            <h3 class="art-title">희곡집</h3>
+            <p class="art-note">푸른 관 속에 잠긴 붉은 여인숙</p>
+          </div>
+        </figure>
+        <div class="book-console" role="group" aria-label="희곡집 자료 콘솔">
+          <button
+            class="power-switch book-switch"
+            type="button"
+            aria-pressed="false"
+            aria-label="채승훈 희곡집 페이지 켜기"
           >
             <span class="switch-slider" aria-hidden="true"></span>
             <span class="switch-on" aria-hidden="true">ON</span>
@@ -605,7 +636,7 @@
         href="https://www.instagram.com/theater_changpa/"
         aria-label="극단 창파 인스타그램"
       >
-        <span class="instagram-icon" aria-hidden="true"></span>
+        <img class="instagram-icon" src="./images/instaicon.gif" alt="" aria-hidden="true" />
       </a>
     </footer>
 

@@ -6,6 +6,7 @@ const actorsSwitch = document.querySelector(".actors-switch");
 const actorRoster = document.querySelector(".actor-roster");
 const actorNames = [...document.querySelectorAll(".actor-list li")];
 const worldSwitch = document.querySelector(".world-switch");
+const bookSwitch = document.querySelector(".book-switch");
 const about = document.querySelector("#about");
 const workPanels = [...document.querySelectorAll(".work-panel")];
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -78,6 +79,15 @@ worldSwitch.addEventListener("click", () => {
   }, prefersReducedMotion.matches ? 0 : 460);
 });
 
+bookSwitch.addEventListener("click", () => {
+  bookSwitch.setAttribute("aria-pressed", "true");
+  bookSwitch.setAttribute("aria-label", "채승훈 희곡집 페이지 켜짐");
+
+  window.setTimeout(() => {
+    window.location.href = "./book.html";
+  }, prefersReducedMotion.matches ? 0 : 460);
+});
+
 workPanels.forEach((panel) => {
   const tab = panel.querySelector(".work-tab");
 
@@ -88,3 +98,15 @@ workPanels.forEach((panel) => {
 actorNames.forEach((name, index) => {
   name.style.setProperty("--actor-index", index);
 });
+
+const initialHash = window.location.hash;
+const initialTarget = initialHash ? document.querySelector(initialHash) : null;
+
+if (initialTarget && initialHash !== "#home") {
+  stage.classList.add("site-entered");
+  stage.classList.remove("entry-locked");
+  entrySwitch.setAttribute("aria-pressed", "true");
+  entrySwitch.setAttribute("aria-label", "극단 창파 무대 켜짐");
+  setLight(true);
+  initialTarget.scrollIntoView({ block: "start" });
+}
