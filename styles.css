@@ -929,6 +929,10 @@ blockquote {
   word-break: keep-all;
 }
 
+.timeline .play {
+  white-space: nowrap;
+}
+
 .timeline time,
 .awards b {
   color: var(--red);
@@ -949,13 +953,18 @@ blockquote {
 .awards ul {
   display: grid;
   gap: 15px;
-  color: rgb(255 241 201 / 0.88);
+  color: rgb(255 241 201 / 0.96);
   line-height: 1.7;
 }
 
+.awards li {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
 .awards b {
-  display: inline-block;
-  width: 64px;
+  flex: 0 0 64px;
 }
 
 .award-subtitle {

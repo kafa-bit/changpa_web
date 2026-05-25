@@ -99,6 +99,15 @@ actorNames.forEach((name, index) => {
   name.style.setProperty("--actor-index", index);
 });
 
+document
+  .querySelectorAll(".timeline strong, .timeline > li > div > span")
+  .forEach((el) => {
+    el.innerHTML = el.innerHTML.replace(
+      /〈[^〉]+〉/g,
+      (match) => `<span class="play">${match}</span>`,
+    );
+  });
+
 const initialHash = window.location.hash;
 const initialTarget = initialHash ? document.querySelector(initialHash) : null;
 
