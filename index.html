@@ -162,6 +162,9 @@
   footer{padding:50px 0 70px;text-align:center;color:var(--paper-dim);font-size:.82rem;border-top:1px solid var(--line);background:#070d22}
   footer .ig{color:var(--magenta);font-weight:700}
   footer .support{margin-top:14px;font-size:.75rem;opacity:.7}
+  .ig-link{display:inline-flex;align-items:center;gap:8px;transition:opacity .2s}
+  .ig-link:hover{opacity:.75}
+  .ig-icon{width:20px;height:20px;filter:invert(1);opacity:.75;vertical-align:middle}
 
   /* ---------- COMPANY NAV (top-left) ---------- */
   .company-nav{
@@ -363,7 +366,12 @@
 <footer>
   <div class="wrap">
     <p>극단 창파 · 2026 정기공연 《불굴의 니나》</p>
-    <p style="margin-top:8px">문의 인스타그램 <span class="ig">@theater_changpa</span></p>
+    <p style="margin-top:8px">
+      <a href="https://www.instagram.com/theater_changpa" target="_blank" rel="noopener" class="ig-link" aria-label="극단 창파 인스타그램">
+        <img src="assets/instagram.png" alt="" aria-hidden="true" class="ig-icon">
+        <span class="ig">@theater_changpa</span>
+      </a>
+    </p>
     <p class="support">후원 한국메세나협회 · 한국문화예술위원회</p>
 
     <div class="changpa-gate">
