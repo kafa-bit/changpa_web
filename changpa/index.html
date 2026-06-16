@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="1995년 창단된 실험연극 극단 창파. 창조를 위한 파괴라는 이름 아래 신체, 오브제, 이미지로 무대를 만들어 온 극단을 소개합니다."
+    />
+    <title>극단 창파 | Theater Changpa</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section class="entry-gate" aria-labelledby="entry-title">
+      <div class="entry-frame">
+        <div class="entry-window">
+          <img
+            src="./images/main.jpg"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="entry-window-shade" aria-hidden="true"></div>
+          <div class="entry-type" aria-hidden="true">
+            <span>1995</span>
+            <b>극단 창파</b>
+          </div>
+          <div class="entry-copy">
+            <p class="eyebrow">Theater Changpa</p>
+            <h1 id="entry-title">극단 창파</h1>
+          </div>
+        </div>
+
+        <div class="entry-console" role="group" aria-label="창파 무대 입장 콘솔">
+          <p>Stage power</p>
+          <button
+            class="power-switch entry-switch"
+            type="button"
+            aria-pressed="false"
+            aria-label="극단 창파 무대 켜기"
+          >
+            <span class="switch-slider" aria-hidden="true"></span>
+            <span class="switch-on" aria-hidden="true">ON</span>
+            <span class="switch-off" aria-hidden="true">OFF</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <header class="stage-header">
+      <a class="brand" href="#home" aria-label="극단 창파 첫 화면">
+        <span>극단 창파</span>
+        <small>Theater Changpa</small>
+      </a>
+      <nav aria-label="주요 섹션">
+        <a href="#about">소개</a>
+        <a href="#works">작품</a>
+        <a href="#history">연혁</a>
+        <a href="#actors">배우</a>
+        <a class="nav-nina" href="../" aria-label="불굴의 니나 공연 페이지">현재 공연 →</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <img
+          class="hero-photo"
+          src="./images/main.jpg"
+          alt="붉은 천을 두른 무대 위 인물이 조명 아래 앉아 있는 공연 장면"
+        />
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="beam beam-hero" aria-hidden="true"></div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Intro</p>
+          <p class="hero-name">극단 창파</p>
+          <h1 id="hero-title">창조를 위한 파괴</h1>
+          <p>극단 창파의 무대가 열립니다.</p>
+        </div>
+        <figure class="heritage-mark">
+          <img
+            src="./images/011.jpg"
+            alt="극단 창파 캘리그라피 로고"
+          />
+        </figure>
+
+        <div class="light-console" role="group" aria-label="창파 소개 조명 콘솔">
+          <span>소개 조명</span>
+          <button
+            class="power-switch light-switch"
+            type="button"
+            aria-pressed="false"
+            aria-label="창파 소개 조명 켜기"
+          >
+            <span class="switch-slider" aria-hidden="true"></span>
+            <span class="switch-on" aria-hidden="true">ON</span>
+            <span class="switch-off" aria-hidden="true">OFF</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="intro about-page" id="about" aria-labelledby="about-title">
+        <div class="beam beam-about" aria-hidden="true"></div>
+        <div class="section-head">
+          <p class="eyebrow">Theater Changpa</p>
+          <h2 id="about-title">극단 창파</h2>
+        </div>
+        <div class="intro-copy lit-copy">
+          <p>
+            극단 창파는 1995년 5월 채승훈 연출가를 중심으로 창단됐다.
+            이름에 담긴 뜻은 창파, <strong>창조를 위한 파괴</strong>다.
+          </p>
+          <p>
+            대사만으로 설명하지 않는다. 무언극, 오브제, 신체 이미지,
+            슬로모션과 음향으로 한국 근현대사와 인간의 본질을 낯설게
+            마주하게 한다.
+          </p>
+        </div>
+        <dl class="facts" aria-label="극단 창파 기본 정보">
+          <div>
+            <dt>창단</dt>
+            <dd>1995년 5월</dd>
+          </div>
+          <div>
+            <dt>지향</dt>
+            <dd>실험 연극</dd>
+          </div>
+          <div>
+            <dt>예술감독</dt>
+            <dd>채승훈</dd>
+          </div>
+          <div>
+            <dt>대표</dt>
+            <dd>나수아</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="statement" aria-label="창파의 무대 언어">
+        <blockquote>
+          몸과 오브제가 남긴 장면,<br />
+          감각을 다시 깨운다.
+        </blockquote>
+      </section>
+
+      <section class="works" id="works" aria-labelledby="works-title">
+        <div class="section-head">
+          <p class="eyebrow">Selected works</p>
+          <h2 id="works-title">대표작</h2>
+        </div>
+
+        <div class="works-gallery" aria-label="대표작 선택 갤러리">
+          <article class="work-panel is-active">
+            <button
+              class="work-tab"
+              type="button"
+              aria-expanded="true"
+              aria-controls="hamlet-work"
+            >
+              <span>2000</span>
+              <b>햄릿머신</b>
+            </button>
+            <div class="work-scene" id="hamlet-work">
+              <div class="work-image hamlet-image">
+                <img
+                  src="./images/햄릿머신/hamlet-machine.png"
+                  alt="붉은 바탕 위 기계적인 해골 형상의 햄릿머신 포스터"
+                  loading="lazy"
+                />
+              </div>
+              <div class="work-detail hamlet-detail">
+                <p class="work-year">2000</p>
+                <h3>햄릿머신</h3>
+                <p>
+                  하이너 뮐러의 파괴적 텍스트와 창파의 형식 실험이
+                  맞닿은 핵심 레퍼토리.
+                </p>
+                <details class="hamlet-note">
+                  <summary>텍스트 소개</summary>
+                  <div class="hamlet-note-body">
+                    <dl aria-label="햄릿머신 작품 정보">
+                      <div>
+                        <dt>원작</dt>
+                        <dd>하이너 뮐러</dd>
+                      </div>
+                      <div>
+                        <dt>연출</dt>
+                        <dd>채승훈</dd>
+                      </div>
+                      <div>
+                        <dt>창파 공연</dt>
+                        <dd>2000년 초연, 2001-2003년 재공연</dd>
+                      </div>
+                    </dl>
+                    <p>
+                      창파의 햄릿머신은 부패한 역사를 잊지 않으려는
+                      고통스러운 몸부림을 굿의 형식 안에 녹여낸 무대다.
+                      하이너 뮐러의 경악의 미학을 한국적 몸과 소리로
+                      옮기며, 난해한 텍스트를 현재의 감각으로 되살렸다.
+                    </p>
+                    <p>
+                      작품의 중심에는 살육과 부패의 역사 앞에서 인식과
+                      행동 사이에 흔들리는 지식인 햄릿의 고뇌가 있다.
+                      배우들은 대본을 몸으로 읽는 리허설에서 출발해
+                      대사를 행위와 소리, 반복되는 패턴으로 분해했다.
+                    </p>
+                    <p>
+                      그렇게 만들어진 공연은 강렬한 에너지와 여백이
+                      공존하는 굿판의 질감을 얻었고, 원작의 충격을
+                      훼손하지 않고 한국화한 새로운 형식의 실험으로
+                      기억된다.
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-panel">
+            <button
+              class="work-tab"
+              type="button"
+              aria-expanded="false"
+              aria-controls="doodri-work"
+            >
+              <span>2007</span>
+              <b>두드리 두드리</b>
+            </button>
+            <div class="work-scene" id="doodri-work">
+              <div class="work-image">
+                <img
+                  src="./images/두드리 두드리/Doodri 7.JPG"
+                  alt="두드리 두드리 공연 장면 위로 무대 조명이 내리는 모습"
+                  loading="lazy"
+                />
+              </div>
+              <div class="work-detail">
+                <p class="work-year">2007</p>
+                <h3>두드리 두드리</h3>
+                <p>
+                  한국전쟁의 기억을 응축된 시적 이미지로 재구성한
+                  창파의 대표 레퍼토리.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-panel">
+            <button
+              class="work-tab"
+              type="button"
+              aria-expanded="false"
+              aria-controls="blue-inn-work"
+            >
+              <span>1998</span>
+              <b>푸른 관 속에 잠긴 붉은 여인숙</b>
+            </button>
+            <div class="work-scene" id="blue-inn-work">
+              <div class="work-image">
+                <img
+                  src="./images/푸른관 속에 잠긴 붉은 여인숙/푸른관2사진1.jpg"
+                  alt="푸른 관 속에 잠긴 붉은 여인숙 공연 무대 장면"
+                  loading="lazy"
+                />
+              </div>
+              <div class="work-detail">
+                <p class="work-year">1998</p>
+                <h3>푸른 관 속에 잠긴 붉은 여인숙</h3>
+                <p>
+                  오래 이어진 레퍼토리의 한 축. 강렬한 조형과 군상으로
+                  창파의 색을 남긴 작품.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="archive" id="history" aria-labelledby="history-title">
+        <div class="section-head">
+          <p class="eyebrow">History</p>
+          <h2 id="history-title">연혁과 수상</h2>
+        </div>
+
+        <ol class="timeline">
+          <li>
+            <time datetime="1995">1995</time>
+            <div>
+              <strong>극단 창파 창단</strong>
+              <span>창단작 〈꽃잎 같은 여자, 물 위에 지고〉로 출발</span>
+            </div>
+          </li>
+          <li>
+            <time datetime="1998">1998</time>
+            <div>
+              <strong>〈푸른 관 속에 잠긴 붉은 여인숙〉</strong>
+              <span>창파의 초기 대표작</span>
+            </div>
+          </li>
+          <li>
+            <time datetime="2000">2000</time>
+            <div>
+              <strong>〈햄릿머신〉, 〈마의태자〉, 〈내가 죽은 이유〉</strong>
+              <span>〈햄릿머신〉이 창파의 대표 레퍼토리로 자리한 해</span>
+            </div>
+          </li>
+          <li>
+            <time datetime="2001">2001</time>
+            <div>
+              <strong>〈햄릿머신〉, 〈첼로와 케찹〉</strong>
+            </div>
+          </li>
+          <li>
+            <time datetime="2002">2002</time>
+            <div>
+              <strong>〈사물의 왕국〉, 〈햄릿머신〉</strong>
+            </div>
+          </li>
+          <li>
+            <time datetime="2003">2003</time>
+            <div>
+              <strong>〈햄릿머신〉</strong>
+            </div>
+          </li>
+          <li>
+            <time datetime="2004">2004</time>
+            <div>
+              <strong>〈마의태자〉</strong>
+            </div>
+          </li>
+          <li>
+            <time datetime="2005">2005</time>
+            <div>
+              <strong>〈햄릿〉</strong>
+            </div>
+          </li>
+          <li>
+            <time datetime="2006">2006</time>
+            <div>
+              <strong>〈햄릿〉, 〈문빌리지〉</strong>
+            </div>
+          </li>
+          <li>
+            <time datetime="2007">2007</time>
+            <div>
+              <strong>〈이 웬수〉, 〈햄릿〉, 〈두드리 두드리〉</strong>
+              <span>〈두드리 두드리〉가 시작된 해</span>
+            </div>
+          </li>
+          <li>
+            <time datetime="2008">2008</time>
+            <div>
+              <strong>〈두드리 두드리〉, 〈미씽-아! 내가 사라졌다〉</strong>
+              <span>〈두드리 두드리〉 서울연극제 우수상과 신인연기상</span>
+            </div>
+          </li>
+          <li>
+            <time datetime="2009">2009</time>
+            <div>
+              <strong>〈레자 드 웨트의 세자매〉, 〈동녀의 봄〉, 〈알마의 즉흥극〉</strong>
+              <span>〈한스와 그레텔〉, 〈두드리 두드리〉, 〈변두리모텔〉, 〈출구와 입구〉</span>
+            </div>
+          </li>
+          <li>
+            <time datetime="2010">2010</time>
+            <div>
+              <strong>〈검둥이들〉, 〈엘르〉, 〈옥수수 밭에 누워있는 연인〉</strong>
+              <span>〈푸른 관 속에 잠긴 붉은 여인숙2〉, 〈푸른 관 속에 잠긴 붉은 여인숙3〉</span>
+            </div>
+          </li>
+          <li>
+            <time datetime="2011">2011</time>
+            <div>
+              <strong>〈햄릿〉, 〈나는 아니야〉, 〈아내가 사라졌다〉</strong>
+              <span>〈푸른 관 속에 잠긴 붉은 여인숙2〉</span>
+            </div>
+          </li>
+          <li>
+            <time datetime="2012">2012</time>
+            <div>
+              <strong>〈한방향〉, 〈다산의 하늘〉, 〈네온속으로〉</strong>
+            </div>
+          </li>
+          <li>
+            <time datetime="2013">2013</time>
+            <div>
+              <strong>〈달걀속의 협주곡〉, 〈누가 우리들의 광기를 멈추게하라〉</strong>
+            </div>
+          </li>
+          <li>
+            <time datetime="2014">2014</time>
+            <div>
+              <strong>〈달 과 개〉, 〈래디칼〉</strong>
+            </div>
+          </li>
+          <li>
+            <time datetime="2015">2015</time>
+            <div>
+              <strong>〈리추얼〉, 〈왕은 죽어가다〉, 〈래디칼〉</strong>
+              <span>〈한여름 밤의 로미오와 줄리엣〉</span>
+            </div>
+          </li>
+          <li>
+            <time datetime="2016">2016</time>
+            <div>
+              <strong>〈메리크리스마스〉, 〈연극생존백서〉</strong>
+              <span>〈메리크리스마스〉 서울연극제 미래야 솟아라 특별상과 연기상</span>
+            </div>
+          </li>
+          <li>
+            <time datetime="2017">2017</time>
+            <div>
+              <strong>〈당근, 잔혹한 도시〉</strong>
+              <span>제8회 현대극페스티벌</span>
+            </div>
+          </li>
+          <li>
+            <time datetime="2018">2018</time>
+            <div>
+              <strong>〈붕어빵아 헤엄쳐라!〉</strong>
+              <span>제9회 현대극페스티벌</span>
+            </div>
+          </li>
+          <li>
+            <time datetime="2024">2024</time>
+            <div>
+              <strong>〈오이디푸스 X〉</strong>
+              <span>제5회 이구아나페스티벌</span>
+            </div>
+          </li>
+          <li>
+            <time datetime="2025">2025</time>
+            <div>
+              <strong>〈오이디푸스 X〉</strong>
+              <span>제46회 서울연극제에서 다시 펼친 고전의 파괴와 재구성</span>
+            </div>
+          </li>
+        </ol>
+
+        <div class="awards" aria-labelledby="awards-title">
+          <h3 id="awards-title">국내 수상</h3>
+          <ul>
+            <li><b>1996</b> 한국연극평론가협회상</li>
+            <li><b>1996</b> 동아연극상 연출상, 채승훈</li>
+            <li><b>1998</b> 올해의 한국연극 베스트5 최우수작품상, 〈푸른 관 속에 잠긴 붉은 여인숙〉</li>
+            <li><b>2001</b> 영희연극상, 채승훈</li>
+            <li><b>2002</b> 서울국제공연예술제 남녀연기상, 〈사물의 왕국〉</li>
+            <li><b>2008</b> 서울연극제 우수상, 〈두드리 두드리〉</li>
+            <li><b>2008</b> 서울연극제 신인연기상, 〈두드리 두드리〉</li>
+            <li><b>2016</b> 서울연극제 미래야 솟아라 특별상, 〈메리크리스마스〉</li>
+            <li><b>2016</b> 서울연극제 미래야 솟아라 연기상, 〈메리크리스마스〉</li>
+          </ul>
+          <h3 class="award-subtitle">해외 수상</h3>
+          <ul>
+            <li><b>2009</b> 프라하 APOSTROF Festival 은상, 〈두드리 두드리〉</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="actors" id="actors" aria-label="출연 배우">
+        <div class="actor-stage">
+          <div class="actor-intro">
+            <figure class="actor-art">
+              <p class="art-eyebrow">ACTOR</p>
+              <div class="art-copy">
+                <h3 class="art-title">창파와 함께 한 배우</h3>
+                <p class="art-note">1995년부터 지금까지, 함께한 이름들</p>
+              </div>
+            </figure>
+            <div class="actors-console" role="group" aria-label="창파 출연 기록 콘솔">
+              <button
+                class="power-switch actors-switch"
+                type="button"
+                aria-pressed="false"
+                aria-label="창파 출연 배우 명단 켜기"
+              >
+                <span class="switch-slider" aria-hidden="true"></span>
+                <span class="switch-on" aria-hidden="true">ON</span>
+                <span class="switch-off" aria-hidden="true">OFF</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="actor-roster" aria-hidden="true">
+            <ul class="actor-list" aria-label="극단 창파 출연 배우">
+              <li>강서현</li>
+              <li>강일</li>
+              <li>곽현지</li>
+              <li>구본진</li>
+              <li>권남희</li>
+              <li>길해연</li>
+              <li>김관규</li>
+              <li>김광래</li>
+              <li>김동빈</li>
+              <li>김두호</li>
+              <li>김뢰하</li>
+              <li>김미진</li>
+              <li>김소미</li>
+              <li>김수지</li>
+              <li>김영훈</li>
+              <li>김은석</li>
+              <li>김지언</li>
+              <li>김크도</li>
+              <li>김태성</li>
+              <li>김태형</li>
+              <li>김한아</li>
+              <li>김혁종</li>
+              <li>김혁중</li>
+              <li>김호정</li>
+              <li>나수아</li>
+              <li>남명렬</li>
+              <li>문경태</li>
+              <li>문채희</li>
+              <li>민경진</li>
+              <li>박빛재환</li>
+              <li>박상용</li>
+              <li>박정근</li>
+              <li>박정호</li>
+              <li>박종상</li>
+              <li>방영</li>
+              <li>소준성</li>
+              <li>소희정</li>
+              <li>손봉숙</li>
+              <li>신서호</li>
+              <li>심철종</li>
+              <li>오민애</li>
+              <li>오훈서</li>
+              <li>우영민</li>
+              <li>우태식</li>
+              <li>윤복인</li>
+              <li>이경준</li>
+              <li>이명호</li>
+              <li>이예은</li>
+              <li>이지연</li>
+              <li>이지혜</li>
+              <li>이진실</li>
+              <li>이진철</li>
+              <li>이창우</li>
+              <li>이채원</li>
+              <li>이호성</li>
+              <li>임소영</li>
+              <li>전지영</li>
+              <li>정솔이</li>
+              <li>정재진</li>
+              <li>조수아</li>
+              <li>주세종</li>
+              <li>최윤석</li>
+              <li>하경화</li>
+              <li>한동희</li>
+              <li>한지훈</li>
+              <li>한형민</li>
+              <li>홍성경</li>
+              <li>홍승현</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="world-port" id="world" aria-label="해외 초청 공연">
+        <figure class="world-port-art">
+          <p class="art-eyebrow">TOUR</p>
+          <div class="art-copy">
+            <h3 class="art-title">해외 초청 공연</h3>
+          </div>
+        </figure>
+        <div class="world-console" role="group" aria-label="해외 공연 자료 콘솔">
+          <button
+            class="power-switch world-switch"
+            type="button"
+            aria-pressed="false"
+            aria-label="해외 공연 자료 페이지 켜기"
+          >
+            <span class="switch-slider" aria-hidden="true"></span>
+            <span class="switch-on" aria-hidden="true">ON</span>
+            <span class="switch-off" aria-hidden="true">OFF</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="book-port" id="book" aria-label="채승훈 희곡집">
+        <figure class="book-port-art">
+          <p class="art-eyebrow">BOOK</p>
+          <div class="art-copy">
+            <h3 class="art-title">희곡집</h3>
+            <p class="art-note">푸른 관 속에 잠긴 붉은 여인숙</p>
+          </div>
+        </figure>
+        <div class="book-console" role="group" aria-label="희곡집 자료 콘솔">
+          <button
+            class="power-switch book-switch"
+            type="button"
+            aria-pressed="false"
+            aria-label="채승훈 희곡집 페이지 켜기"
+          >
+            <span class="switch-slider" aria-hidden="true"></span>
+            <span class="switch-on" aria-hidden="true">ON</span>
+            <span class="switch-off" aria-hidden="true">OFF</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="gallery" aria-label="공연 사진">
+        <figure>
+          <img
+            src="./images/일본 공연.JPG"
+            alt="극단 창파 일본 공연 무대 장면"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="./images/검둥이들사진1.JPG"
+            alt="검둥이들 공연에서 가면과 화려한 의상을 입은 인물들"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="./images/두드리 두드리/Doodri 8.jpg"
+            alt="두드리 두드리 공연에서 흰 의상을 입은 인물들이 무대에 선 장면"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="./images/2012neon.JPG"
+            alt="2012년 무대에서 여러 인물이 군상을 이루는 공연 장면"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+    </main>
+
+    <footer>
+      <p>극단 창파 · Theater Changpa</p>
+      <a
+        class="instagram-link"
+        href="https://www.instagram.com/theater_changpa/"
+        aria-label="극단 창파 인스타그램"
+      >
+        <img class="instagram-icon" src="./images/instaicon.gif" alt="" aria-hidden="true" />
+      </a>
+      <a class="footer-nina-link" href="../" aria-label="불굴의 니나 공연 페이지">
+        ← 2026 정기공연 《불굴의 니나》
+      </a>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

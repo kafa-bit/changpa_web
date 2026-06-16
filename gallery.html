@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>그림으로 읽는 니나 — 불굴의 니나</title>
+<meta name="description" content="《불굴의 니나》 작가의 그림으로 읽는 일곱 개의 상징.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0a1330;--magenta:#ff2e88;--paper:#f3ecdf;--paper-dim:#b9b3a6;
+    --twilight:#1b2750;--line:rgba(243,236,223,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:linear-gradient(180deg,#0a1330,#101c40 40%,#1a1530 100%);
+    color:var(--paper);font-family:'Noto Sans KR',sans-serif;line-height:1.8;overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .serif{font-family:'Noto Serif KR',serif}
+
+  /* top bar */
+  .bar{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;
+    padding:16px 24px;background:rgba(10,19,48,.7);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar .back{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;letter-spacing:.06em;color:var(--paper-dim);transition:color .25s}
+  .bar .back:hover{color:var(--magenta)}
+  .bar .title{font-family:'Black Han Sans',sans-serif;font-size:1rem;letter-spacing:.04em}
+
+  /* intro */
+  .intro{text-align:center;padding:90px 24px 40px}
+  .intro .eyebrow{font-size:.78rem;letter-spacing:.34em;color:var(--magenta);font-weight:700;margin-bottom:20px}
+  .intro h1{font-family:'Black Han Sans',sans-serif;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.1;margin-bottom:24px}
+  .intro p{max-width:620px;margin:0 auto;color:var(--paper-dim);font-family:'Noto Serif KR',serif;font-size:1.1rem}
+  .feather-fall{font-size:1.6rem;margin:30px 0 0;opacity:.6}
+
+  /* plates */
+  .plate{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:70px 0;border-bottom:1px solid var(--line)}
+  .plate:nth-child(even) .pic{order:2}
+  .pic{position:relative}
+  .pic img{width:100%;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.55)}
+  .pic .num{position:absolute;top:-26px;left:-10px;font-family:'Black Han Sans',sans-serif;
+    font-size:5rem;color:rgba(255,46,136,.22);line-height:1;z-index:-1}
+  .txt .sym{font-size:.76rem;letter-spacing:.26em;color:var(--magenta);font-weight:700;margin-bottom:14px}
+  .txt h2{font-family:'Black Han Sans',sans-serif;font-size:clamp(1.7rem,3.6vw,2.6rem);line-height:1.15;margin-bottom:20px}
+  .txt p{color:var(--paper-dim);font-size:1.03rem}
+  .txt .keys{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+  .txt .keys span{border:1px solid var(--line);padding:6px 14px;font-size:.8rem;color:var(--paper);font-family:'Noto Serif KR',serif}
+
+  /* closing */
+  .closing{text-align:center;padding:100px 24px}
+  .closing p{font-family:'Noto Serif KR',serif;font-size:clamp(1.4rem,3.4vw,2rem);line-height:1.6;max-width:720px;margin:0 auto;color:var(--paper)}
+  .closing p .hl{color:var(--magenta)}
+  .closing .by{margin-top:24px;color:var(--paper-dim);letter-spacing:.06em}
+  .closing .btn{display:inline-block;margin-top:46px;padding:16px 38px;background:var(--magenta);color:#fff;font-weight:700;border-radius:2px;
+    box-shadow:0 6px 0 rgba(168,16,86,.6);transition:transform .15s,box-shadow .15s}
+  .closing .btn:hover{transform:translateY(-2px);box-shadow:0 9px 0 rgba(168,16,86,.6)}
+  .closing .ghost{display:block;margin-top:22px;color:var(--paper-dim);font-size:.85rem;letter-spacing:.08em}
+  .closing .ghost:hover{color:var(--magenta)}
+
+  @media(max-width:820px){
+    .plate{grid-template-columns:1fr;gap:26px;padding:54px 0}
+    .plate:nth-child(even) .pic{order:0}
+    .pic{max-width:420px;margin:0 auto}
+    .pic .num{font-size:3.4rem;top:-18px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="bar">
+  <a class="back" href="index.html">← 공연 페이지로</a>
+  <span class="title">그림으로 읽는 니나</span>
+</nav>
+
+<header class="intro">
+  <div class="eyebrow">불굴의 니나 · READ THROUGH PAINTINGS</div>
+  <h1>그림으로 읽는<br>일곱 개의 장면</h1>
+  <p>《불굴의 니나》는 푸른 황혼의 무덤가에서 펼쳐집니다. 작가가 그린 일곱 장면 속, 사다리와 깃털과 초승달이 무엇을 말하는지 — 정답은 없습니다. 다만, 공연을 보기 전 당신만의 짐작을 품어 보세요.</p>
+  <div class="feather-fall">⸙</div>
+</header>
+
+<main class="wrap">
+
+  <article class="plate">
+    <div class="pic"><span class="num">01</span><img src="assets/ref-pierrot.png" alt="종을 울리는 광대"></div>
+    <div class="txt">
+      <div class="sym">막을 여는 종소리</div>
+      <h2>잠든 죽음을<br>깨우는 광대</h2>
+      <p>달빛 아래, 검은 옷의 광대가 종을 흔듭니다. 천으로 덮인 무덤들은 아직 잠들어 있습니다. 부조리극은 이렇게 시작됩니다 — 진지함과 우스꽝스러움을 한 손에 쥔 채.</p>
+      <div class="keys"><span>광대</span><span>종</span><span>초승달</span></div>
+    </div>
+  </article>
+
+  <article class="plate">
+    <div class="pic"><span class="num">02</span><img src="assets/ref-ladder.png" alt="사다리 위의 예술가"></div>
+    <div class="txt">
+      <div class="sym">무대에 오른 자</div>
+      <h2>사다리 위에서<br>팔을 벌리다</h2>
+      <p>새로운 형식을 꿈꾸는 젊은 예술가가 사다리 끝에 섭니다. 발밑에는 갈매기를 안은 니나, 그리고 그를 올려다보거나 비웃는 사람들. 비상하려는 자와 지켜보는 자들 사이의 거리가 곧 이 연극의 긴장입니다.</p>
+      <div class="keys"><span>사다리</span><span>갈매기</span><span>관객</span></div>
+    </div>
+  </article>
+
+  <article class="plate">
+    <div class="pic"><span class="num">03</span><img src="assets/ref-blindfold.png" alt="이마에 붕대를 감는 니나"></div>
+    <div class="txt">
+      <div class="sym">체홉을 비트는 장면</div>
+      <h2>이마에 감기는<br>붕대</h2>
+      <p>원작 『갈매기』에서 머리에 붕대를 감은 인물의 장면을, 이 무대는 니나에게로 옮겨 놓습니다. 흘린 피와 그것을 감싸는 손길, 둘러선 사람들의 놀란 시선. 비극을 패러디하면서도 진심은 끝내 남기는 — 이 작품 특유의 방식이 응축된 한 장면입니다.</p>
+      <div class="keys"><span>붕대</span><span>상처</span><span>패러디</span></div>
+    </div>
+  </article>
+
+  <article class="plate">
+    <div class="pic"><span class="num">04</span><img src="assets/ref-papers.png" alt="흩날리는 원고"></div>
+    <div class="txt">
+      <div class="sym">쓰이고 흩어지는 말</div>
+      <h2>허공에<br>흩날리는 원고</h2>
+      <p>작가의 손을 떠난 종이들이 바람에 날립니다. 채찍과 비명, 과장된 몸짓. 쓰는 일과 무너지는 일이 동시에 벌어지는 무대 — 예술이 남기는 것과 흩어지는 것을 함께 보여줍니다.</p>
+      <div class="keys"><span>원고</span><span>부조리</span><span>반복</span></div>
+    </div>
+  </article>
+
+  <article class="plate">
+    <div class="pic"><span class="num">05</span><img src="assets/ref-dance.png" alt="무덤 사이의 춤"></div>
+    <div class="txt">
+      <div class="sym">삶과 죽음의 왈츠</div>
+      <h2>무덤들 사이에서<br>추는 춤</h2>
+      <p>바이올린이 울리고, 인물들은 십자가 사이에서 춤을 춥니다. 희극과 비극이 한 박자 안에 포개집니다. 깃털은 계속 떨어지고, 춤은 멈추지 않습니다.</p>
+      <div class="keys"><span>춤</span><span>바이올린</span><span>깃털</span></div>
+    </div>
+  </article>
+
+  <article class="plate">
+    <div class="pic"><span class="num">06</span><img src="assets/ref-stage.png" alt="텅 빈 무대를 바라보는 인물들"></div>
+    <div class="txt">
+      <div class="sym">관객이 된 인물들</div>
+      <h2>텅 빈 무대를<br>바라보다</h2>
+      <p>다섯 사람이 등을 돌린 채, 막이 드리운 빈 무대를 바라봅니다. 무대 위의 인물이 곧 객석의 우리가 되는 순간. 연극은 무엇이고, 우리는 무엇을 보러 온 걸까요.</p>
+      <div class="keys"><span>빈 무대</span><span>관객</span><span>경계</span></div>
+    </div>
+  </article>
+
+  <article class="plate">
+    <div class="pic"><span class="num">07</span><img src="assets/ref-suicide.png" alt="마지막 장면, 허무"></div>
+    <div class="txt">
+      <div class="sym">마지막 — 허무</div>
+      <h2>사다리 위의 비상,<br>그 아래의 잠</h2>
+      <p>니나는 다시 사다리에 오르고, 깃털은 하늘 가득 쏟아집니다. 발밑엔 잠든 듯 누운 몸들. 끝과 시작이 맞닿은 장면. 허무 위에서도 끝내 멈추지 않는 질문이 남습니다.</p>
+      <div class="keys"><span>비상</span><span>허무</span><span>되돌아오는 질문</span></div>
+    </div>
+  </article>
+
+</main>
+
+<section class="closing">
+  <p>갈매기 대신,<br><span class="hl">우리 이야기 속에서 당신의 세상을 떠올려 주세요.</span></p>
+  <div class="by">공동연출 조유민</div>
+  <a class="btn" href="index.html#info">예매 정보 보기</a>
+  <a class="ghost" href="index.html">← 공연 페이지로 돌아가기</a>
+</section>
+
+</body>
+</html>

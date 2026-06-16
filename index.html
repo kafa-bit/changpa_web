@@ -1,645 +1,382 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="1995년 창단된 실험연극 극단 창파. 창조를 위한 파괴라는 이름 아래 신체, 오브제, 이미지로 무대를 만들어 온 극단을 소개합니다."
-    />
-    <title>극단 창파 | Theater Changpa</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <section class="entry-gate" aria-labelledby="entry-title">
-      <div class="entry-frame">
-        <div class="entry-window">
-          <img
-            src="./images/main.jpg"
-            alt=""
-            aria-hidden="true"
-          />
-          <div class="entry-window-shade" aria-hidden="true"></div>
-          <div class="entry-type" aria-hidden="true">
-            <span>1995</span>
-            <b>극단 창파</b>
-          </div>
-          <div class="entry-copy">
-            <p class="eyebrow">Theater Changpa</p>
-            <h1 id="entry-title">극단 창파</h1>
-          </div>
-        </div>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>불굴의 니나 — 2026 극단 창파 정기공연</title>
+<meta name="description" content="체홉 『갈매기』를 부조리극으로 다시 불러낸 연극 《불굴의 니나》. 2026.07.15–07.19 동숭무대 소극장.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0a1330;
+    --navy2:#11204a;
+    --magenta:#ff2e88;
+    --magenta-soft:#e8157a;
+    --paper:#f3ecdf;
+    --paper-dim:#cbc4b6;
+    --twilight:#2a3a66;
+    --line:rgba(243,236,223,.16);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--navy);
+    color:var(--paper);
+    font-family:'Noto Sans KR',sans-serif;
+    line-height:1.75;
+    overflow-x:hidden;
+  }
+  /* film grain overlay */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .display{font-family:'Noto Sans KR',sans-serif;font-weight:800;letter-spacing:-.03em;line-height:1.06}
+  .serif{font-family:'Noto Serif KR',serif}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
 
-        <div class="entry-console" role="group" aria-label="창파 무대 입장 콘솔">
-          <p>Stage power</p>
-          <button
-            class="power-switch entry-switch"
-            type="button"
-            aria-pressed="false"
-            aria-label="극단 창파 무대 켜기"
-          >
-            <span class="switch-slider" aria-hidden="true"></span>
-            <span class="switch-on" aria-hidden="true">ON</span>
-            <span class="switch-off" aria-hidden="true">OFF</span>
-          </button>
-        </div>
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;min-height:100vh;display:flex;align-items:center;
+    background:
+      radial-gradient(120% 90% at 80% 10%, rgba(255,46,136,.30), transparent 55%),
+      radial-gradient(100% 80% at 10% 90%, rgba(255,46,136,.22), transparent 50%),
+      linear-gradient(160deg,#0a1330 0%,#0d1838 45%,#1a0f2e 100%);
+    overflow:hidden;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;width:100%;padding:80px 0}
+  .eyebrow{font-size:.82rem;letter-spacing:.32em;color:var(--magenta);font-weight:700;margin-bottom:22px}
+  .hero h1{font-size:clamp(4.2rem,12vw,8.5rem);color:var(--paper);text-shadow:0 4px 0 rgba(255,46,136,.25)}
+  .hero h1 .blk{display:block}
+  .hero-meta{margin-top:30px;border-top:1px solid var(--line);padding-top:24px;max-width:430px}
+  .hero-meta .date{font-size:1.35rem;font-weight:700;color:var(--paper)}
+  .hero-meta .time{font-size:.95rem;color:var(--paper-dim);margin-top:4px}
+  .hero-meta .place{font-size:1.1rem;margin-top:14px;font-weight:500}
+  .hero-meta .place span{color:var(--magenta)}
+  .cta-row{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:15px 30px;font-weight:700;font-size:1rem;border-radius:2px;
+    background:var(--magenta);color:#fff;transition:transform .15s ease, box-shadow .15s ease;
+    box-shadow:0 6px 0 rgba(168,16,86,.6);
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 9px 0 rgba(168,16,86,.6)}
+  .btn.ghost{background:transparent;color:var(--paper);box-shadow:none;border:1px solid var(--line)}
+  .btn.ghost:hover{border-color:var(--magenta);color:var(--magenta);transform:translateY(-2px)}
+  .poster-frame{position:relative;justify-self:end}
+  .poster-frame img{
+    width:min(360px,80vw);border:1px solid rgba(243,236,223,.2);
+    box-shadow:0 30px 70px rgba(0,0,0,.6);transform:rotate(1.2deg);
+  }
+  /* drifting feather -> hidden door hint */
+  .feather-hint{
+    position:absolute;top:38px;right:32px;z-index:5;display:flex;align-items:center;gap:8px;
+    color:var(--paper-dim);font-size:.72rem;letter-spacing:.18em;opacity:.55;transition:opacity .3s, color .3s;
+  }
+  .feather-hint:hover{opacity:1;color:var(--magenta)}
+  .feather-hint svg{width:26px;height:26px;animation:float 5s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-9px) rotate(6deg)}}
+  .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:.7rem;letter-spacing:.3em;color:var(--paper-dim);opacity:.6}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{position:relative;padding:96px 0}
+  .label{font-size:.78rem;letter-spacing:.34em;color:var(--magenta);font-weight:700;margin-bottom:18px}
+  .stencil{
+    display:inline-block;background:var(--paper);color:var(--navy);font-family:'Black Han Sans',sans-serif;
+    font-size:1.5rem;padding:6px 22px 8px;letter-spacing:.02em;
+    clip-path:polygon(2% 8%,98% 0,100% 86%,4% 100%,0 30%);
+  }
+  h2.heading{font-family:'Noto Sans KR',sans-serif;font-weight:800;letter-spacing:-.02em;font-size:clamp(2rem,5vw,3.2rem);margin:18px 0 30px;color:var(--paper)}
+
+  /* about */
+  .about{background:linear-gradient(180deg,#0a1330,#0c1736)}
+  .about-lead{font-family:'Noto Serif KR',serif;font-size:clamp(1.4rem,3.4vw,2.1rem);font-weight:600;line-height:1.55;color:var(--paper);max-width:760px}
+  .about-lead em{color:var(--magenta);font-style:normal}
+  .about-body{margin-top:30px;max-width:720px;color:var(--paper-dim);font-size:1.04rem}
+  .about-body p{margin-bottom:16px}
+  .qa{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+  .qa span{border:1px solid var(--line);padding:12px 20px;font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--paper)}
+  .qa span b{color:var(--magenta);font-weight:700}
+
+  /* metaphor teaser */
+  .meta{background:
+      radial-gradient(80% 60% at 70% 30%, rgba(42,58,102,.6), transparent),
+      linear-gradient(180deg,#0c1736,#0e1430)}
+  .meta .intro{max-width:680px;color:var(--paper-dim);margin-bottom:48px}
+  .meta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{position:relative;overflow:hidden;border:1px solid var(--line);background:#0a1024}
+  .card img{width:100%;aspect-ratio:2/3;object-fit:cover;transition:transform .6s ease;filter:saturate(.92)}
+  .card:hover img{transform:scale(1.05)}
+  .card .cap{position:absolute;left:0;right:0;bottom:0;padding:20px 18px;
+    background:linear-gradient(transparent,rgba(7,11,28,.95) 60%)}
+  .card .cap b{display:block;font-size:1.05rem;color:var(--paper);margin-bottom:4px}
+  .card .cap small{color:var(--paper-dim);font-size:.82rem;line-height:1.5;display:block}
+  .door{margin-top:46px;text-align:center}
+  .door a{display:inline-flex;align-items:center;gap:12px;font-family:'Noto Serif KR',serif;font-size:1.15rem;color:var(--paper);
+    border-bottom:1px solid var(--magenta);padding-bottom:6px;transition:gap .25s,color .25s}
+  .door a:hover{gap:20px;color:var(--magenta)}
+  .door svg{width:22px;height:22px}
+  .door p{color:var(--paper-dim);font-size:.85rem;margin-top:12px;letter-spacing:.06em}
+
+  /* director note */
+  .note{background:linear-gradient(180deg,#0e1430,#0a1330)}
+  .note-quote{font-family:'Noto Serif KR',serif;font-size:clamp(1.5rem,3.6vw,2.3rem);line-height:1.7;color:var(--paper);max-width:840px;font-weight:500}
+  .note-quote .hl{color:var(--magenta)}
+  .note-by{margin-top:28px;color:var(--paper-dim);letter-spacing:.06em}
+  .note-by b{color:var(--paper)}
+  .note-chae{margin-top:48px;border-left:2px solid var(--magenta);padding-left:24px;max-width:720px;color:var(--paper-dim)}
+  .note-chae b{color:var(--paper)}
+
+  /* cast */
+  .cast{background:linear-gradient(180deg,#0a1330,#0c1736)}
+  .cast-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+  .actor{text-align:center}
+  .actor .ph{position:relative;overflow:hidden;border:1px solid var(--line);background:#0a1024;aspect-ratio:3/4}
+  .actor .ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.95)}
+  .actor .role{margin-top:14px;color:var(--magenta);font-size:.82rem;letter-spacing:.14em;font-weight:700}
+  .actor .name{font-family:'Noto Serif KR',serif;font-size:1.25rem;font-weight:700;color:var(--paper);margin-top:2px}
+  .staff{margin-top:46px;border-top:1px solid var(--line);padding-top:24px;color:var(--paper-dim);font-size:.92rem;line-height:2}
+  .staff b{color:var(--paper)}
+
+  /* info */
+  .info{background:linear-gradient(180deg,#0c1736,#08102a)}
+  .info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .info-grid .cell{background:var(--navy);padding:30px 22px;text-align:center}
+  .info-grid .cell .k{font-size:.76rem;letter-spacing:.2em;color:var(--paper-dim);margin-bottom:10px}
+  .info-grid .cell .v{font-family:'Black Han Sans',sans-serif;font-size:1.55rem;color:var(--paper)}
+  .info-grid .cell .v small{display:block;font-family:'Noto Sans KR';font-size:.8rem;color:var(--paper-dim);font-weight:400;margin-top:4px}
+  .disc{margin-top:40px}
+  .disc h3{font-family:'Noto Serif KR',serif;color:var(--paper);font-size:1.2rem;margin-bottom:18px}
+  table{width:100%;border-collapse:collapse;font-size:.95rem}
+  th,td{padding:14px 12px;text-align:left;border-bottom:1px solid var(--line)}
+  th{color:var(--paper-dim);font-weight:500;font-size:.82rem;letter-spacing:.08em}
+  td .pct{color:var(--magenta);font-weight:700;font-family:'Black Han Sans',sans-serif;font-size:1.1rem}
+  .notice{margin-top:20px;color:var(--paper-dim);font-size:.82rem;line-height:1.9}
+  .final-cta{text-align:center;margin-top:60px}
+  .final-cta .btn{font-size:1.1rem;padding:18px 44px}
+
+  footer{padding:50px 0 70px;text-align:center;color:var(--paper-dim);font-size:.82rem;border-top:1px solid var(--line);background:#070d22}
+  footer .ig{color:var(--magenta);font-weight:700}
+  footer .support{margin-top:14px;font-size:.75rem;opacity:.7}
+
+  /* ---------- COMPANY NAV (top-left) ---------- */
+  .company-nav{
+    position:absolute;top:38px;left:32px;z-index:5;display:flex;align-items:center;gap:8px;
+    color:var(--paper-dim);font-size:.72rem;letter-spacing:.18em;opacity:.5;transition:opacity .3s,color .3s;
+  }
+  .company-nav:hover{opacity:1;color:var(--magenta)}
+  .company-nav svg{width:18px;height:18px;flex-shrink:0}
+
+  /* ---------- CHANGPA GATE (footer) ---------- */
+  .changpa-gate{
+    border-top:1px solid var(--line);margin-top:40px;padding-top:36px;
+    display:flex;flex-direction:column;align-items:center;gap:12px;
+  }
+  .changpa-gate .gate-label{font-size:.72rem;letter-spacing:.3em;color:var(--paper-dim);opacity:.65}
+  .changpa-gate .gate-link{
+    display:inline-flex;align-items:center;gap:16px;
+    font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--paper);
+    border:1px solid var(--line);padding:15px 32px;border-radius:2px;
+    transition:border-color .25s,color .25s,background .25s;
+  }
+  .changpa-gate .gate-link:hover{border-color:var(--magenta);color:var(--magenta);background:rgba(255,46,136,.04)}
+  .changpa-gate .gate-link svg{width:18px;height:18px;flex-shrink:0}
+  .changpa-gate .gate-note{font-size:.7rem;opacity:.45;letter-spacing:.08em}
+
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr;gap:36px;text-align:left}
+    .poster-frame{justify-self:start}
+    .meta-grid{grid-template-columns:1fr 1fr}
+    .cast-grid{grid-template-columns:repeat(2,1fr)}
+    .info-grid{grid-template-columns:repeat(2,1fr)}
+    .feather-hint{top:18px;right:16px}
+    .company-nav{top:18px;left:16px}
+  }
+  @media(max-width:520px){
+    .meta-grid{grid-template-columns:1fr}
+    .cast-grid{grid-template-columns:1fr 1fr}
+    section{padding:70px 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <a class="company-nav" href="./changpa/" aria-label="극단 창파 소개 페이지로 이동">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    극단 창파
+  </a>
+  <a class="feather-hint" href="gallery.html" aria-label="그림으로 읽는 니나">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 4C9 4 4 11 4 18l2-2c6 0 12-4 12-12z"/><path d="M4 18l8-8M9 18h6"/></svg>
+    그림으로 읽는 니나
+  </a>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">2026 극단 창파 정기공연</div>
+      <h1 class="display"><span class="blk">불굴의</span><span class="blk">니나</span></h1>
+      <div class="hero-meta">
+        <div class="date">2026.07.15 <small>수</small> – 07.19 <small>일</small></div>
+        <div class="time">평일 19:30 · 토·일 16:00</div>
+        <div class="place">동숭무대 <span>소극장</span></div>
       </div>
-    </section>
+      <div class="cta-row">
+        <a class="btn" href="https://booking.naver.com" target="_blank" rel="noopener">예매하기</a>
+        <a class="btn ghost" href="#about">작품 들여다보기</a>
+      </div>
+    </div>
+    <div class="poster-frame">
+      <img src="assets/poster.png" alt="불굴의 니나 포스터">
+    </div>
+  </div>
+  <div class="scroll-cue">SCROLL ↓</div>
+</header>
 
-    <header class="stage-header">
-      <a class="brand" href="#home" aria-label="극단 창파 첫 화면">
-        <span>극단 창파</span>
-        <small>Theater Changpa</small>
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="wrap">
+    <span class="stencil">작품 소개</span>
+    <p class="about-lead">체홉의 세계와 <em>부조리극의 유희</em>가 만나는 무대.</p>
+    <div class="about-body">
+      <p>《불굴의 니나》는 『갈매기』의 인물들을 무대 위로 다시 불러냅니다. 그러나 이 작품은 고전을 재현하지 않습니다. 익숙한 이야기를 뒤집고, 상징을 의심하며, 연극의 경계를 흔듭니다.</p>
+      <p>반복되는 말과 몸짓, 패러디와 진심, 웃음과 허무가 뒤섞인 무대 위에서 인물들은 길을 잃고, 질문은 자꾸만 되돌아옵니다.</p>
+    </div>
+    <div class="qa">
+      <span><b>연극</b>은 무엇인가</span>
+      <span>새로운 <b>형식</b>은 가능한가</span>
+      <span><b>예술</b>은 무엇을 남기는가</span>
+    </div>
+    <div class="about-body" style="margin-top:34px">
+      <p>무너지고 의심하면서도 끝내 멈추지 않는 질문. 《불굴의 니나》는 그 질문들 사이를 유쾌하고도 집요하게 오가는 연극입니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= METAPHOR TEASER ================= -->
+<section class="meta">
+  <div class="wrap">
+    <span class="stencil">상징의 무대</span>
+    <h2 class="heading">상징을 먹고 자라난 갈매기</h2>
+    <p class="intro">이 작품은 말보다 이미지로 먼저 말을 건넵니다. 사다리, 깃털, 무덤, 초승달 — 무대를 채우는 상징들의 한 조각을 미리 들여다보세요. 답을 알려주지 않아도 좋습니다. 공연은, 이 수수께끼들 사이에서 시작됩니다.</p>
+    <div class="meta-grid">
+      <div class="card">
+        <img src="assets/ref-suicide.png" alt="사다리 위의 니나">
+        <div class="cap"><b>사다리 위의 비상</b><small>오르려는 자와 그 아래 잠든 자들 — 날아오름과 추락 사이</small></div>
+      </div>
+      <div class="card">
+        <img src="assets/ref-dance.png" alt="무덤 사이의 춤">
+        <div class="cap"><b>무덤 사이의 왈츠</b><small>죽음을 등지고 추는 춤 — 희극과 비극이 한 박자로</small></div>
+      </div>
+      <div class="card">
+        <img src="assets/ref-blindfold.png" alt="이마에 붕대를 감는 니나">
+        <div class="cap"><b>이마에 감기는 붕대</b><small>원작 『갈매기』의 한 장면을 비튼 패러디 — 상처를 감싸는 손길과 지켜보는 시선</small></div>
+      </div>
+    </div>
+    <div class="door">
+      <a href="gallery.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 4C9 4 4 11 4 18l2-2c6 0 12-4 12-12z"/><path d="M4 18l8-8"/></svg>
+        그림으로 읽는 니나 — 일곱 점 더 보기
       </a>
-      <nav aria-label="주요 섹션">
-        <a href="#about">소개</a>
-        <a href="#works">작품</a>
-        <a href="#history">연혁</a>
-        <a href="#actors">배우</a>
-      </nav>
-    </header>
+      <p>떨어지는 깃털을 따라가면, 작가의 그림들이 기다리고 있습니다.</p>
+    </div>
+  </div>
+</section>
 
-    <main>
-      <section class="hero" id="home" aria-labelledby="hero-title">
-        <img
-          class="hero-photo"
-          src="./images/main.jpg"
-          alt="붉은 천을 두른 무대 위 인물이 조명 아래 앉아 있는 공연 장면"
-        />
-        <div class="hero-shade" aria-hidden="true"></div>
-        <div class="beam beam-hero" aria-hidden="true"></div>
+<!-- ================= DIRECTOR NOTE ================= -->
+<section class="note">
+  <div class="wrap">
+    <span class="stencil">연출의 글</span>
+    <p class="note-quote" style="margin-top:26px">
+      아마도 궁금해질 테지요.<br>
+      배우가 배역의 안팎을 오가는 이유를,<br>
+      니나가 죽었다 깨어나기를 반복하는 이유를,<br>
+      메드베젠꼬가 영영 검은 옷을 벗지 못하는 이유를.<br><br>
+      이 무수한 질문들에 우리가 건네는 단 하나의 진실은—<br>
+      <span class="hl">갈매기 대신, 우리 이야기 속에서 당신의 세상을 떠올려 주세요.</span>
+    </p>
+    <p class="note-by">공동연출 <b>조유민</b></p>
+    <div class="note-chae">
+      <p>본 작품은 체홉의 『갈매기』를 패러디한 작품입니다. 평소 좋아하는 베케트 『고도를 기다리며』의 반복성을 함께 차용했습니다. 원작에 충실하면서도, 니나의 수동적인 역할을 뒤집어 보면 어떤 관극 반응이 나타날까 — 그것이 애초의 시도였습니다.</p>
+      <p style="margin-top:12px">작·연출 <b>채승훈</b></p>
+    </div>
+  </div>
+</section>
 
-        <div class="hero-copy">
-          <p class="eyebrow">Intro</p>
-          <p class="hero-name">극단 창파</p>
-          <h1 id="hero-title">창조를 위한 파괴</h1>
-          <p>극단 창파의 무대가 열립니다.</p>
-        </div>
-        <figure class="heritage-mark">
-          <img
-            src="./images/011.jpg"
-            alt="극단 창파 캘리그라피 로고"
-          />
-        </figure>
+<!-- ================= CAST ================= -->
+<section class="cast">
+  <div class="wrap">
+    <span class="stencil">등장인물</span>
+    <h2 class="heading">다섯 사람, 다섯 가면</h2>
+    <div class="cast-grid">
+      <div class="actor"><div class="ph"><img src="assets/cast/arkadina.png" alt="아르까지나 역 임소영"></div><div class="role">아르까지나</div><div class="name">임소영</div></div>
+      <div class="actor"><div class="ph"><img src="assets/cast/medvedenko.png" alt="메드베젠꼬 역 한형민"></div><div class="role">메드베젠꼬</div><div class="name">한형민</div></div>
+      <div class="actor"><div class="ph"><img src="assets/cast/trigorin.png" alt="뜨리고린 역 김혁종"></div><div class="role">뜨리고린</div><div class="name">김혁종</div></div>
+      <div class="actor"><div class="ph"><img src="assets/cast/nina.png" alt="니나 역 나수아"></div><div class="role">니나</div><div class="name">나수아</div></div>
+      <div class="actor"><div class="ph"><img src="assets/cast/treplev.png" alt="뜨레쁠레프 역 한지훈"></div><div class="role">뜨레쁠레프</div><div class="name">한지훈</div></div>
+    </div>
+    <div class="staff">
+      <b>작·연출</b> 채승훈 &nbsp;·&nbsp; <b>공동연출</b> 조유민 &nbsp;·&nbsp; <b>미술감독</b> 표종현 &nbsp;·&nbsp; <b>기획</b> 이지혜 &nbsp;·&nbsp; <b>디자인</b> 이혜경 &nbsp;·&nbsp; <b>영상</b> 이재성 &nbsp;·&nbsp; <b>조명</b> 이현직 · 한동희
+    </div>
+  </div>
+</section>
 
-        <div class="light-console" role="group" aria-label="창파 소개 조명 콘솔">
-          <span>소개 조명</span>
-          <button
-            class="power-switch light-switch"
-            type="button"
-            aria-pressed="false"
-            aria-label="창파 소개 조명 켜기"
-          >
-            <span class="switch-slider" aria-hidden="true"></span>
-            <span class="switch-on" aria-hidden="true">ON</span>
-            <span class="switch-off" aria-hidden="true">OFF</span>
-          </button>
-        </div>
-      </section>
+<!-- ================= INFO ================= -->
+<section class="info" id="info">
+  <div class="wrap">
+    <span class="stencil">공연 안내</span>
+    <h2 class="heading">관람 정보</h2>
+    <div class="info-grid">
+      <div class="cell"><div class="k">관람료</div><div class="v">30,000<small>전석 자유석</small></div></div>
+      <div class="cell"><div class="k">관람등급</div><div class="v">12+<small>만 12세 이상</small></div></div>
+      <div class="cell"><div class="k">러닝타임</div><div class="v">80분<small>인터미션 없음</small></div></div>
+      <div class="cell"><div class="k">장소</div><div class="v">동숭<small>무대 소극장</small></div></div>
+    </div>
 
-      <section class="intro about-page" id="about" aria-labelledby="about-title">
-        <div class="beam beam-about" aria-hidden="true"></div>
-        <div class="section-head">
-          <p class="eyebrow">Theater Changpa</p>
-          <h2 id="about-title">극단 창파</h2>
-        </div>
-        <div class="intro-copy lit-copy">
-          <p>
-            극단 창파는 1995년 5월 채승훈 연출가를 중심으로 창단됐다.
-            이름에 담긴 뜻은 창파, <strong>창조를 위한 파괴</strong>다.
-          </p>
-          <p>
-            대사만으로 설명하지 않는다. 무언극, 오브제, 신체 이미지,
-            슬로모션과 음향으로 한국 근현대사와 인간의 본질을 낯설게
-            마주하게 한다.
-          </p>
-        </div>
-        <dl class="facts" aria-label="극단 창파 기본 정보">
-          <div>
-            <dt>창단</dt>
-            <dd>1995년 5월</dd>
-          </div>
-          <div>
-            <dt>지향</dt>
-            <dd>실험 연극</dd>
-          </div>
-          <div>
-            <dt>예술감독</dt>
-            <dd>채승훈</dd>
-          </div>
-          <div>
-            <dt>대표</dt>
-            <dd>나수아</dd>
-          </div>
-        </dl>
-      </section>
+    <div class="disc">
+      <h3>예매 할인 정보</h3>
+      <table>
+        <thead><tr><th>권종</th><th>할인</th><th>적용</th><th>안내</th></tr></thead>
+        <tbody>
+          <tr><td>얼리버드</td><td><span class="pct">30%</span></td><td>본인 1매</td><td>6월 30일까지 예매 시</td></tr>
+          <tr><td>학생 (청소년·대학생)</td><td><span class="pct">30%</span></td><td>본인 1매</td><td>학생증 등 증빙서류 지참</td></tr>
+          <tr><td>예술인 패스</td><td><span class="pct">40%</span></td><td>본인 1매</td><td>관람 시 예술인패스 확인</td></tr>
+          <tr><td>장애인·국가유공자</td><td><span class="pct">50%</span></td><td>1인 2매</td><td>본인 증빙서류 확인</td></tr>
+        </tbody>
+      </table>
+      <div class="notice">
+        · 모든 할인은 중복 할인이 불가하며, 당일 현장 취소·교환·환불이 불가합니다.<br>
+        · 티켓 수령 시 할인 대상 증빙서류를 지참, 본인 확인 후 수령하셔야 합니다. (대리수령 불가)<br>
+        · 할인 증빙서류 미지참 시 현장에서 정가 대비 차액을 지불하셔야 합니다.
+      </div>
+    </div>
 
-      <section class="statement" aria-label="창파의 무대 언어">
-        <blockquote>
-          몸과 오브제가 남긴 장면,<br />
-          감각을 다시 깨운다.
-        </blockquote>
-      </section>
+    <div class="final-cta">
+      <a class="btn" href="https://booking.naver.com" target="_blank" rel="noopener">네이버에서 예매하기</a>
+    </div>
+  </div>
+</section>
 
-      <section class="works" id="works" aria-labelledby="works-title">
-        <div class="section-head">
-          <p class="eyebrow">Selected works</p>
-          <h2 id="works-title">대표작</h2>
-        </div>
+<footer>
+  <div class="wrap">
+    <p>극단 창파 · 2026 정기공연 《불굴의 니나》</p>
+    <p style="margin-top:8px">문의 인스타그램 <span class="ig">@theater_changpa</span></p>
+    <p class="support">후원 한국메세나협회 · 한국문화예술위원회</p>
 
-        <div class="works-gallery" aria-label="대표작 선택 갤러리">
-          <article class="work-panel is-active">
-            <button
-              class="work-tab"
-              type="button"
-              aria-expanded="true"
-              aria-controls="hamlet-work"
-            >
-              <span>2000</span>
-              <b>햄릿머신</b>
-            </button>
-            <div class="work-scene" id="hamlet-work">
-              <div class="work-image hamlet-image">
-                <img
-                  src="./images/햄릿머신/hamlet-machine.png"
-                  alt="붉은 바탕 위 기계적인 해골 형상의 햄릿머신 포스터"
-                  loading="lazy"
-                />
-              </div>
-              <div class="work-detail hamlet-detail">
-                <p class="work-year">2000</p>
-                <h3>햄릿머신</h3>
-                <p>
-                  하이너 뮐러의 파괴적 텍스트와 창파의 형식 실험이
-                  맞닿은 핵심 레퍼토리.
-                </p>
-                <details class="hamlet-note">
-                  <summary>텍스트 소개</summary>
-                  <div class="hamlet-note-body">
-                    <dl aria-label="햄릿머신 작품 정보">
-                      <div>
-                        <dt>원작</dt>
-                        <dd>하이너 뮐러</dd>
-                      </div>
-                      <div>
-                        <dt>연출</dt>
-                        <dd>채승훈</dd>
-                      </div>
-                      <div>
-                        <dt>창파 공연</dt>
-                        <dd>2000년 초연, 2001-2003년 재공연</dd>
-                      </div>
-                    </dl>
-                    <p>
-                      창파의 햄릿머신은 부패한 역사를 잊지 않으려는
-                      고통스러운 몸부림을 굿의 형식 안에 녹여낸 무대다.
-                      하이너 뮐러의 경악의 미학을 한국적 몸과 소리로
-                      옮기며, 난해한 텍스트를 현재의 감각으로 되살렸다.
-                    </p>
-                    <p>
-                      작품의 중심에는 살육과 부패의 역사 앞에서 인식과
-                      행동 사이에 흔들리는 지식인 햄릿의 고뇌가 있다.
-                      배우들은 대본을 몸으로 읽는 리허설에서 출발해
-                      대사를 행위와 소리, 반복되는 패턴으로 분해했다.
-                    </p>
-                    <p>
-                      그렇게 만들어진 공연은 강렬한 에너지와 여백이
-                      공존하는 굿판의 질감을 얻었고, 원작의 충격을
-                      훼손하지 않고 한국화한 새로운 형식의 실험으로
-                      기억된다.
-                    </p>
-                  </div>
-                </details>
-              </div>
-            </div>
-          </article>
-
-          <article class="work-panel">
-            <button
-              class="work-tab"
-              type="button"
-              aria-expanded="false"
-              aria-controls="doodri-work"
-            >
-              <span>2007</span>
-              <b>두드리 두드리</b>
-            </button>
-            <div class="work-scene" id="doodri-work">
-              <div class="work-image">
-                <img
-                  src="./images/두드리 두드리/Doodri 7.JPG"
-                  alt="두드리 두드리 공연 장면 위로 무대 조명이 내리는 모습"
-                  loading="lazy"
-                />
-              </div>
-              <div class="work-detail">
-                <p class="work-year">2007</p>
-                <h3>두드리 두드리</h3>
-                <p>
-                  한국전쟁의 기억을 응축된 시적 이미지로 재구성한
-                  창파의 대표 레퍼토리.
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <article class="work-panel">
-            <button
-              class="work-tab"
-              type="button"
-              aria-expanded="false"
-              aria-controls="blue-inn-work"
-            >
-              <span>1998</span>
-              <b>푸른 관 속에 잠긴 붉은 여인숙</b>
-            </button>
-            <div class="work-scene" id="blue-inn-work">
-              <div class="work-image">
-                <img
-                  src="./images/푸른관 속에 잠긴 붉은 여인숙/푸른관2사진1.jpg"
-                  alt="푸른 관 속에 잠긴 붉은 여인숙 공연 무대 장면"
-                  loading="lazy"
-                />
-              </div>
-              <div class="work-detail">
-                <p class="work-year">1998</p>
-                <h3>푸른 관 속에 잠긴 붉은 여인숙</h3>
-                <p>
-                  오래 이어진 레퍼토리의 한 축. 강렬한 조형과 군상으로
-                  창파의 색을 남긴 작품.
-                </p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="archive" id="history" aria-labelledby="history-title">
-        <div class="section-head">
-          <p class="eyebrow">History</p>
-          <h2 id="history-title">연혁과 수상</h2>
-        </div>
-
-        <ol class="timeline">
-          <li>
-            <time datetime="1995">1995</time>
-            <div>
-              <strong>극단 창파 창단</strong>
-              <span>창단작 〈꽃잎 같은 여자, 물 위에 지고〉로 출발</span>
-            </div>
-          </li>
-          <li>
-            <time datetime="1998">1998</time>
-            <div>
-              <strong>〈푸른 관 속에 잠긴 붉은 여인숙〉</strong>
-              <span>창파의 초기 대표작</span>
-            </div>
-          </li>
-          <li>
-            <time datetime="2000">2000</time>
-            <div>
-              <strong>〈햄릿머신〉, 〈마의태자〉, 〈내가 죽은 이유〉</strong>
-              <span>〈햄릿머신〉이 창파의 대표 레퍼토리로 자리한 해</span>
-            </div>
-          </li>
-          <li>
-            <time datetime="2001">2001</time>
-            <div>
-              <strong>〈햄릿머신〉, 〈첼로와 케찹〉</strong>
-            </div>
-          </li>
-          <li>
-            <time datetime="2002">2002</time>
-            <div>
-              <strong>〈사물의 왕국〉, 〈햄릿머신〉</strong>
-            </div>
-          </li>
-          <li>
-            <time datetime="2003">2003</time>
-            <div>
-              <strong>〈햄릿머신〉</strong>
-            </div>
-          </li>
-          <li>
-            <time datetime="2004">2004</time>
-            <div>
-              <strong>〈마의태자〉</strong>
-            </div>
-          </li>
-          <li>
-            <time datetime="2005">2005</time>
-            <div>
-              <strong>〈햄릿〉</strong>
-            </div>
-          </li>
-          <li>
-            <time datetime="2006">2006</time>
-            <div>
-              <strong>〈햄릿〉, 〈문빌리지〉</strong>
-            </div>
-          </li>
-          <li>
-            <time datetime="2007">2007</time>
-            <div>
-              <strong>〈이 웬수〉, 〈햄릿〉, 〈두드리 두드리〉</strong>
-              <span>〈두드리 두드리〉가 시작된 해</span>
-            </div>
-          </li>
-          <li>
-            <time datetime="2008">2008</time>
-            <div>
-              <strong>〈두드리 두드리〉, 〈미씽-아! 내가 사라졌다〉</strong>
-              <span>〈두드리 두드리〉 서울연극제 우수상과 신인연기상</span>
-            </div>
-          </li>
-          <li>
-            <time datetime="2009">2009</time>
-            <div>
-              <strong>〈레자 드 웨트의 세자매〉, 〈동녀의 봄〉, 〈알마의 즉흥극〉</strong>
-              <span>〈한스와 그레텔〉, 〈두드리 두드리〉, 〈변두리모텔〉, 〈출구와 입구〉</span>
-            </div>
-          </li>
-          <li>
-            <time datetime="2010">2010</time>
-            <div>
-              <strong>〈검둥이들〉, 〈엘르〉, 〈옥수수 밭에 누워있는 연인〉</strong>
-              <span>〈푸른 관 속에 잠긴 붉은 여인숙2〉, 〈푸른 관 속에 잠긴 붉은 여인숙3〉</span>
-            </div>
-          </li>
-          <li>
-            <time datetime="2011">2011</time>
-            <div>
-              <strong>〈햄릿〉, 〈나는 아니야〉, 〈아내가 사라졌다〉</strong>
-              <span>〈푸른 관 속에 잠긴 붉은 여인숙2〉</span>
-            </div>
-          </li>
-          <li>
-            <time datetime="2012">2012</time>
-            <div>
-              <strong>〈한방향〉, 〈다산의 하늘〉, 〈네온속으로〉</strong>
-            </div>
-          </li>
-          <li>
-            <time datetime="2013">2013</time>
-            <div>
-              <strong>〈달걀속의 협주곡〉, 〈누가 우리들의 광기를 멈추게하라〉</strong>
-            </div>
-          </li>
-          <li>
-            <time datetime="2014">2014</time>
-            <div>
-              <strong>〈달 과 개〉, 〈래디칼〉</strong>
-            </div>
-          </li>
-          <li>
-            <time datetime="2015">2015</time>
-            <div>
-              <strong>〈리추얼〉, 〈왕은 죽어가다〉, 〈래디칼〉</strong>
-              <span>〈한여름 밤의 로미오와 줄리엣〉</span>
-            </div>
-          </li>
-          <li>
-            <time datetime="2016">2016</time>
-            <div>
-              <strong>〈메리크리스마스〉, 〈연극생존백서〉</strong>
-              <span>〈메리크리스마스〉 서울연극제 미래야 솟아라 특별상과 연기상</span>
-            </div>
-          </li>
-          <li>
-            <time datetime="2017">2017</time>
-            <div>
-              <strong>〈당근, 잔혹한 도시〉</strong>
-              <span>제8회 현대극페스티벌</span>
-            </div>
-          </li>
-          <li>
-            <time datetime="2018">2018</time>
-            <div>
-              <strong>〈붕어빵아 헤엄쳐라!〉</strong>
-              <span>제9회 현대극페스티벌</span>
-            </div>
-          </li>
-          <li>
-            <time datetime="2024">2024</time>
-            <div>
-              <strong>〈오이디푸스 X〉</strong>
-              <span>제5회 이구아나페스티벌</span>
-            </div>
-          </li>
-          <li>
-            <time datetime="2025">2025</time>
-            <div>
-              <strong>〈오이디푸스 X〉</strong>
-              <span>제46회 서울연극제에서 다시 펼친 고전의 파괴와 재구성</span>
-            </div>
-          </li>
-        </ol>
-
-        <div class="awards" aria-labelledby="awards-title">
-          <h3 id="awards-title">국내 수상</h3>
-          <ul>
-            <li><b>1996</b> 한국연극평론가협회상</li>
-            <li><b>1996</b> 동아연극상 연출상, 채승훈</li>
-            <li><b>1998</b> 올해의 한국연극 베스트5 최우수작품상, 〈푸른 관 속에 잠긴 붉은 여인숙〉</li>
-            <li><b>2001</b> 영희연극상, 채승훈</li>
-            <li><b>2002</b> 서울국제공연예술제 남녀연기상, 〈사물의 왕국〉</li>
-            <li><b>2008</b> 서울연극제 우수상, 〈두드리 두드리〉</li>
-            <li><b>2008</b> 서울연극제 신인연기상, 〈두드리 두드리〉</li>
-            <li><b>2016</b> 서울연극제 미래야 솟아라 특별상, 〈메리크리스마스〉</li>
-            <li><b>2016</b> 서울연극제 미래야 솟아라 연기상, 〈메리크리스마스〉</li>
-          </ul>
-          <h3 class="award-subtitle">해외 수상</h3>
-          <ul>
-            <li><b>2009</b> 프라하 APOSTROF Festival 은상, 〈두드리 두드리〉</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="actors" id="actors" aria-label="출연 배우">
-        <div class="actor-stage">
-          <div class="actor-intro">
-            <figure class="actor-art">
-              <p class="art-eyebrow">ACTOR</p>
-              <div class="art-copy">
-                <h3 class="art-title">창파와 함께 한 배우</h3>
-                <p class="art-note">1995년부터 지금까지, 함께한 이름들</p>
-              </div>
-            </figure>
-            <div class="actors-console" role="group" aria-label="창파 출연 기록 콘솔">
-              <button
-                class="power-switch actors-switch"
-                type="button"
-                aria-pressed="false"
-                aria-label="창파 출연 배우 명단 켜기"
-              >
-                <span class="switch-slider" aria-hidden="true"></span>
-                <span class="switch-on" aria-hidden="true">ON</span>
-                <span class="switch-off" aria-hidden="true">OFF</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="actor-roster" aria-hidden="true">
-            <ul class="actor-list" aria-label="극단 창파 출연 배우">
-              <li>강서현</li>
-              <li>강일</li>
-              <li>곽현지</li>
-              <li>구본진</li>
-              <li>권남희</li>
-              <li>길해연</li>
-              <li>김관규</li>
-              <li>김광래</li>
-              <li>김동빈</li>
-              <li>김두호</li>
-              <li>김뢰하</li>
-              <li>김미진</li>
-              <li>김소미</li>
-              <li>김수지</li>
-              <li>김영훈</li>
-              <li>김은석</li>
-              <li>김지언</li>
-              <li>김크도</li>
-              <li>김태성</li>
-              <li>김태형</li>
-              <li>김한아</li>
-              <li>김혁종</li>
-              <li>김혁중</li>
-              <li>김호정</li>
-              <li>나수아</li>
-              <li>남명렬</li>
-              <li>문경태</li>
-              <li>문채희</li>
-              <li>민경진</li>
-              <li>박빛재환</li>
-              <li>박상용</li>
-              <li>박정근</li>
-              <li>박정호</li>
-              <li>박종상</li>
-              <li>방영</li>
-              <li>소준성</li>
-              <li>소희정</li>
-              <li>손봉숙</li>
-              <li>신서호</li>
-              <li>심철종</li>
-              <li>오민애</li>
-              <li>오훈서</li>
-              <li>우영민</li>
-              <li>우태식</li>
-              <li>윤복인</li>
-              <li>이경준</li>
-              <li>이명호</li>
-              <li>이예은</li>
-              <li>이지연</li>
-              <li>이지혜</li>
-              <li>이진실</li>
-              <li>이진철</li>
-              <li>이창우</li>
-              <li>이채원</li>
-              <li>이호성</li>
-              <li>임소영</li>
-              <li>전지영</li>
-              <li>정솔이</li>
-              <li>정재진</li>
-              <li>조수아</li>
-              <li>주세종</li>
-              <li>최윤석</li>
-              <li>하경화</li>
-              <li>한동희</li>
-              <li>한지훈</li>
-              <li>한형민</li>
-              <li>홍성경</li>
-              <li>홍승현</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="world-port" id="world" aria-label="해외 초청 공연">
-        <figure class="world-port-art">
-          <p class="art-eyebrow">TOUR</p>
-          <div class="art-copy">
-            <h3 class="art-title">해외 초청 공연</h3>
-          </div>
-        </figure>
-        <div class="world-console" role="group" aria-label="해외 공연 자료 콘솔">
-          <button
-            class="power-switch world-switch"
-            type="button"
-            aria-pressed="false"
-            aria-label="해외 공연 자료 페이지 켜기"
-          >
-            <span class="switch-slider" aria-hidden="true"></span>
-            <span class="switch-on" aria-hidden="true">ON</span>
-            <span class="switch-off" aria-hidden="true">OFF</span>
-          </button>
-        </div>
-      </section>
-
-      <section class="book-port" id="book" aria-label="채승훈 희곡집">
-        <figure class="book-port-art">
-          <p class="art-eyebrow">BOOK</p>
-          <div class="art-copy">
-            <h3 class="art-title">희곡집</h3>
-            <p class="art-note">푸른 관 속에 잠긴 붉은 여인숙</p>
-          </div>
-        </figure>
-        <div class="book-console" role="group" aria-label="희곡집 자료 콘솔">
-          <button
-            class="power-switch book-switch"
-            type="button"
-            aria-pressed="false"
-            aria-label="채승훈 희곡집 페이지 켜기"
-          >
-            <span class="switch-slider" aria-hidden="true"></span>
-            <span class="switch-on" aria-hidden="true">ON</span>
-            <span class="switch-off" aria-hidden="true">OFF</span>
-          </button>
-        </div>
-      </section>
-
-      <section class="gallery" aria-label="공연 사진">
-        <figure>
-          <img
-            src="./images/일본 공연.JPG"
-            alt="극단 창파 일본 공연 무대 장면"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="./images/검둥이들사진1.JPG"
-            alt="검둥이들 공연에서 가면과 화려한 의상을 입은 인물들"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="./images/두드리 두드리/Doodri 8.jpg"
-            alt="두드리 두드리 공연에서 흰 의상을 입은 인물들이 무대에 선 장면"
-            loading="lazy"
-          />
-        </figure>
-        <figure>
-          <img
-            src="./images/2012neon.JPG"
-            alt="2012년 무대에서 여러 인물이 군상을 이루는 공연 장면"
-            loading="lazy"
-          />
-        </figure>
-      </section>
-    </main>
-
-    <footer>
-      <p>극단 창파 · Theater Changpa</p>
-      <a
-        class="instagram-link"
-        href="https://www.instagram.com/theater_changpa/"
-        aria-label="극단 창파 인스타그램"
-      >
-        <img class="instagram-icon" src="./images/instaicon.gif" alt="" aria-hidden="true" />
+    <div class="changpa-gate">
+      <p class="gate-label">THEATER CHANGPA</p>
+      <a class="gate-link" href="./changpa/">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        극단 창파 소개 보기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-    </footer>
+      <p class="gate-note">1995년 창단 · 창조를 위한 파괴</p>
+    </div>
+  </div>
+</footer>
 
-    <script src="./script.js"></script>
-  </body>
+</body>
 </html>
