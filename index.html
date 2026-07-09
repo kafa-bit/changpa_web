@@ -7,7 +7,7 @@
 <meta name="description" content="체홉 『갈매기』를 부조리극으로 다시 불러낸 연극 《불굴의 니나》. 2026.07.15–07.19 동숭무대 소극장.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
     --navy:#0a1330;
@@ -18,13 +18,16 @@
     --paper-dim:#cbc4b6;
     --twilight:#2a3a66;
     --line:rgba(243,236,223,.16);
+    --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+    --serif:'Noto Serif KR',serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
     background:var(--navy);
     color:var(--paper);
-    font-family:'Noto Sans KR',sans-serif;
+    font-family:var(--sans);
+    font-size:16px;
     line-height:1.75;
     overflow-x:hidden;
     word-break:keep-all;
@@ -34,8 +37,8 @@
     content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.05;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
-  .display{font-family:'Noto Sans KR',sans-serif;font-weight:800;letter-spacing:-.03em;line-height:1.06}
-  .serif{font-family:'Noto Serif KR',serif}
+  .display{font-family:var(--sans);font-weight:900;letter-spacing:0;line-height:1.04}
+  .serif{font-family:var(--serif)}
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
 
@@ -50,9 +53,9 @@
       linear-gradient(160deg,#0a1330 0%,#0d1838 45%,#1a0f2e 100%);
     overflow:hidden;
   }
-  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;width:100%;padding:80px 0}
-  .eyebrow{font-size:.82rem;letter-spacing:.32em;color:var(--magenta);font-weight:700;margin-bottom:22px}
-  .hero h1{font-size:clamp(4.2rem,12vw,8.5rem);color:var(--paper);text-shadow:0 4px 0 rgba(255,46,136,.25)}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.86fr);gap:48px;align-items:center;width:100%;padding:86px 0 76px}
+  .eyebrow{font-size:.82rem;letter-spacing:0;color:var(--magenta);font-weight:800;margin-bottom:22px;text-transform:uppercase}
+  .hero h1{font-size:7.4rem;color:var(--paper);text-shadow:0 4px 0 rgba(255,46,136,.25)}
   .hero h1 .blk{display:block}
   .hero-meta{margin-top:30px;border-top:1px solid var(--line);padding-top:24px;max-width:430px}
   .hero-meta .date{font-size:1.35rem;font-weight:700;color:var(--paper)}
@@ -61,7 +64,7 @@
   .hero-meta .place span{color:var(--magenta)}
   .cta-row{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
   .btn{
-    display:inline-block;padding:15px 30px;font-weight:700;font-size:1rem;border-radius:2px;
+    display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;font-weight:800;font-size:1rem;border-radius:2px;
     background:var(--magenta);color:#fff;transition:transform .15s ease, box-shadow .15s ease;
     box-shadow:0 6px 0 rgba(168,16,86,.6);
   }
@@ -70,37 +73,38 @@
   .btn.ghost:hover{border-color:var(--magenta);color:var(--magenta);transform:translateY(-2px)}
   .poster-frame{position:relative;justify-self:end}
   .poster-frame img{
-    width:min(360px,80vw);border:1px solid rgba(243,236,223,.2);
+    width:min(360px,100%);border:1px solid rgba(243,236,223,.2);
     box-shadow:0 30px 70px rgba(0,0,0,.6);transform:rotate(1.2deg);
   }
   /* drifting feather -> hidden door hint */
   .feather-hint{
     position:absolute;top:38px;right:32px;z-index:5;display:flex;align-items:center;gap:8px;
-    color:var(--paper-dim);font-size:.72rem;letter-spacing:.18em;opacity:.55;transition:opacity .3s, color .3s;
+    color:var(--paper-dim);font-size:.72rem;letter-spacing:0;opacity:.55;transition:opacity .3s, color .3s;
   }
   .feather-hint:hover{opacity:1;color:var(--magenta)}
   .feather-hint svg{width:26px;height:26px;animation:float 5s ease-in-out infinite}
   @keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-9px) rotate(6deg)}}
-  .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:.7rem;letter-spacing:.3em;color:var(--paper-dim);opacity:.6}
+  .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:.7rem;letter-spacing:0;color:var(--paper-dim);opacity:.6}
 
   /* ---------- SECTION SHELL ---------- */
   section{position:relative;padding:96px 0}
-  .label{font-size:.78rem;letter-spacing:.34em;color:var(--magenta);font-weight:700;margin-bottom:18px}
+  .label{font-size:.78rem;letter-spacing:0;color:var(--magenta);font-weight:800;margin-bottom:18px}
   .stencil{
-    display:inline-block;background:var(--paper);color:var(--navy);font-family:'Black Han Sans',sans-serif;
-    font-size:1.5rem;padding:6px 22px 8px;letter-spacing:.02em;
+    display:inline-block;background:var(--paper);color:var(--navy);font-family:var(--sans);
+    font-size:1.32rem;font-weight:900;padding:7px 20px 9px;letter-spacing:0;
     clip-path:polygon(2% 8%,98% 0,100% 86%,4% 100%,0 30%);
   }
-  h2.heading{font-family:'Noto Sans KR',sans-serif;font-weight:800;letter-spacing:-.02em;font-size:clamp(2rem,5vw,3.2rem);margin:18px 0 30px;color:var(--paper)}
+  h2.heading{font-family:var(--sans);font-weight:900;letter-spacing:0;font-size:3rem;margin:18px 0 30px;color:var(--paper);line-height:1.2}
 
   /* about */
   .about{background:linear-gradient(180deg,#0a1330,#0c1736)}
-  .about-lead{font-family:'Noto Serif KR',serif;font-size:clamp(1.4rem,3.4vw,2.1rem);font-weight:600;line-height:1.55;color:var(--paper);max-width:760px}
+  .about-lead{font-family:var(--serif);font-size:1.95rem;font-weight:600;line-height:1.55;color:var(--paper);max-width:760px}
   .about-lead em{color:var(--magenta);font-style:normal}
   .about-body{margin-top:30px;max-width:720px;color:var(--paper-dim);font-size:1.04rem}
+  .about-body.about-closing{margin-top:34px}
   .about-body p{margin-bottom:16px}
   .qa{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
-  .qa span{border:1px solid var(--line);padding:12px 20px;font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--paper)}
+  .qa span{border:1px solid var(--line);padding:12px 20px;font-family:var(--sans);font-size:1.02rem;font-weight:600;color:var(--paper)}
   .qa span b{color:var(--magenta);font-weight:700}
 
   /* metaphor teaser */
@@ -117,20 +121,23 @@
   .card .cap b{display:block;font-size:1.05rem;color:var(--paper);margin-bottom:4px}
   .card .cap small{color:var(--paper-dim);font-size:.82rem;line-height:1.5;display:block}
   .door{margin-top:46px;text-align:center}
-  .door a{display:inline-flex;align-items:center;gap:12px;font-family:'Noto Serif KR',serif;font-size:1.15rem;color:var(--paper);
+  .door a{display:inline-flex;align-items:center;gap:12px;font-family:var(--sans);font-size:1.08rem;font-weight:700;color:var(--paper);
     border-bottom:1px solid var(--magenta);padding-bottom:6px;transition:gap .25s,color .25s}
   .door a:hover{gap:20px;color:var(--magenta)}
   .door svg{width:22px;height:22px}
-  .door p{color:var(--paper-dim);font-size:.85rem;margin-top:12px;letter-spacing:.06em}
+  .door p{color:var(--paper-dim);font-size:.85rem;margin-top:12px;letter-spacing:0}
 
   /* director note */
   .note{background:linear-gradient(180deg,#0e1430,#0a1330)}
-  .note-quote{font-family:'Noto Serif KR',serif;font-size:clamp(1.1rem,2.2vw,1.45rem);line-height:1.85;color:var(--paper);max-width:840px;font-weight:500}
+  .note-quote{font-family:var(--serif);font-size:1.34rem;line-height:1.86;color:var(--paper);max-width:840px;font-weight:500}
   .note-quote .hl{color:var(--magenta)}
-  .note-by{margin-top:20px;color:var(--paper-dim);letter-spacing:.06em}
+  .note-by{margin-top:20px;color:var(--paper-dim);letter-spacing:0}
   .note-by b{color:var(--paper)}
   .note-chae{border-left:2px solid var(--magenta);padding-left:24px;max-width:720px;color:var(--paper-dim);font-size:1.08rem;line-height:1.85}
   .note-chae b{color:var(--paper)}
+  .note-chae.note-opening{margin-top:26px}
+  .note-chae .note-credit{margin-top:12px}
+  .note-quote.note-main{margin-top:48px}
 
   /* cast */
   .cast{background:linear-gradient(180deg,#0a1330,#0c1736)}
@@ -138,8 +145,8 @@
   .actor{text-align:center}
   .actor .ph{position:relative;overflow:hidden;border:1px solid var(--line);background:#0a1024;aspect-ratio:3/4}
   .actor .ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.95)}
-  .actor .role{margin-top:14px;color:var(--magenta);font-size:.82rem;letter-spacing:.14em;font-weight:700}
-  .actor .name{font-family:'Noto Serif KR',serif;font-size:1.25rem;font-weight:700;color:var(--paper);margin-top:2px}
+  .actor .role{margin-top:14px;color:var(--magenta);font-size:.82rem;letter-spacing:0;font-weight:800}
+  .actor .name{font-family:var(--sans);font-size:1.22rem;font-weight:800;color:var(--paper);margin-top:2px}
   .staff{margin-top:46px;border-top:1px solid var(--line);padding-top:24px;color:var(--paper-dim);font-size:.92rem;line-height:2}
   .staff b{color:var(--paper)}
 
@@ -147,28 +154,30 @@
   .info{background:linear-gradient(180deg,#0c1736,#08102a)}
   .info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
   .info-grid .cell{background:var(--navy);padding:30px 22px;text-align:center}
-  .info-grid .cell .k{font-size:.76rem;letter-spacing:.2em;color:var(--paper-dim);margin-bottom:10px}
-  .info-grid .cell .v{font-family:'Noto Sans KR',sans-serif;font-weight:700;font-size:1.45rem;color:var(--paper)}
-  .info-grid .cell .v small{display:block;font-family:'Noto Sans KR';font-size:.8rem;color:var(--paper-dim);font-weight:400;margin-top:4px}
+  .info-grid .cell .k{font-size:.76rem;letter-spacing:0;color:var(--paper-dim);margin-bottom:10px;font-weight:800}
+  .info-grid .cell .v{font-family:var(--sans);font-weight:800;font-size:1.45rem;color:var(--paper)}
+  .info-grid .cell .v small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--paper-dim);font-weight:400;margin-top:4px}
   .info-grid .cell .v.place{font-size:1.1rem}
   .disc{margin-top:40px}
-  .disc h3{font-family:'Noto Serif KR',serif;color:var(--paper);font-size:1.2rem;margin-bottom:18px}
-  table{width:100%;border-collapse:collapse;font-size:.95rem}
+  .disc{overflow-x:auto}
+  .disc h3{font-family:var(--sans);color:var(--paper);font-size:1.2rem;margin-bottom:18px;font-weight:800}
+  table{width:100%;min-width:680px;border-collapse:collapse;font-size:.95rem}
   th,td{padding:14px 12px;text-align:left;border-bottom:1px solid var(--line)}
-  th{color:var(--paper-dim);font-weight:500;font-size:.82rem;letter-spacing:.08em}
-  td .pct{color:var(--magenta);font-weight:700;font-family:'Black Han Sans',sans-serif;font-size:1.1rem}
+  th{color:var(--paper-dim);font-weight:700;font-size:.82rem;letter-spacing:0}
+  td .pct{color:var(--magenta);font-weight:900;font-family:var(--sans);font-size:1.04rem}
   .notice{margin-top:20px;color:var(--paper-dim);font-size:.82rem;line-height:1.9}
   .final-cta{text-align:center;margin-top:60px}
   .final-cta .btn{font-size:1.1rem;padding:18px 44px}
 
   footer{padding:50px 0 70px;text-align:center;color:var(--paper-dim);font-size:.82rem;border-top:1px solid var(--line);background:#070d22}
+  footer .contact{margin-top:8px}
   footer .ig{color:var(--magenta);font-weight:700}
   footer .support{margin-top:14px;font-size:.75rem;opacity:.7}
 
   /* ---------- COMPANY NAV (top-left) ---------- */
   .company-nav{
     position:absolute;top:38px;left:32px;z-index:5;display:flex;align-items:center;gap:8px;
-    color:var(--paper-dim);font-size:.72rem;letter-spacing:.18em;opacity:.5;transition:opacity .3s,color .3s;
+    color:var(--paper-dim);font-size:.72rem;letter-spacing:0;opacity:.5;transition:opacity .3s,color .3s;
   }
   .company-nav:hover{opacity:1;color:var(--magenta)}
   .company-nav svg{width:18px;height:18px;flex-shrink:0}
@@ -178,19 +187,21 @@
     border-top:1px solid var(--line);margin-top:40px;padding-top:36px;
     display:flex;flex-direction:column;align-items:center;gap:12px;
   }
-  .changpa-gate .gate-label{font-size:.72rem;letter-spacing:.3em;color:var(--paper-dim);opacity:.65}
+  .changpa-gate .gate-label{font-size:.72rem;letter-spacing:0;color:var(--paper-dim);opacity:.65}
   .changpa-gate .gate-link{
     display:inline-flex;align-items:center;gap:16px;
-    font-family:'Noto Serif KR',serif;font-size:1.05rem;color:var(--paper);
+    font-family:var(--sans);font-size:1.04rem;font-weight:800;color:var(--paper);
     border:1px solid var(--line);padding:15px 32px;border-radius:2px;
     transition:border-color .25s,color .25s,background .25s;
   }
   .changpa-gate .gate-link:hover{border-color:var(--magenta);color:var(--magenta);background:rgba(255,46,136,.04)}
   .changpa-gate .gate-link svg{width:18px;height:18px;flex-shrink:0}
-  .changpa-gate .gate-note{font-size:.7rem;opacity:.45;letter-spacing:.08em}
+  .changpa-gate .gate-note{font-size:.7rem;opacity:.45;letter-spacing:0}
 
   @media(max-width:880px){
-    .hero-grid{grid-template-columns:1fr;gap:36px;text-align:left}
+    .hero{min-height:auto}
+    .hero-grid{grid-template-columns:1fr;gap:36px;text-align:left;padding:104px 0 72px}
+    .hero h1{font-size:5.4rem}
     .poster-frame{justify-self:start}
     .meta-grid{grid-template-columns:1fr 1fr}
     .cast-grid{grid-template-columns:repeat(2,1fr)}
@@ -204,8 +215,17 @@
     .br-mobile{display:inline}
   }
   @media(max-width:520px){
+    .wrap{padding:0 20px}
+    .hero-grid{padding:112px 0 66px}
+    .hero h1{font-size:4.08rem}
+    .hero-meta .date{font-size:1.12rem}
+    h2.heading{font-size:2.08rem}
+    .about-lead{font-size:1.36rem}
+    .note-quote{font-size:1.08rem}
+    .btn{width:100%}
     .meta-grid{grid-template-columns:1fr}
     .cast-grid{grid-template-columns:1fr 1fr}
+    .info-grid{grid-template-columns:1fr}
     section{padding:70px 0}
   }
 </style>
@@ -257,7 +277,7 @@
       <span>새로운 <b>형식</b>은 가능한가</span>
       <span><b>예술</b>은 무엇을 남기는가</span>
     </div>
-    <div class="about-body" style="margin-top:34px">
+    <div class="about-body about-closing">
       <p>무너지고 의심하면서도 끝내 멈추지 않는 질문. 《불굴의 니나》는 그 질문들 사이를 유쾌하고도 집요하게 오가는 연극입니다.</p>
     </div>
   </div>
@@ -297,11 +317,11 @@
 <section class="note">
   <div class="wrap">
     <span class="stencil">연출의 글</span>
-    <div class="note-chae" style="margin-top:26px">
+    <div class="note-chae note-opening">
       <p>본 작품은 체홉의 『갈매기』를 패러디한 작품입니다. 평소 좋아하는 베케트 『고도를 기다리며』의 반복성을 함께 차용했습니다. 원작에 충실하면서도, 니나의 수동적인 역할을 뒤집어 보면 어떤 관극 반응이 나타날까 — 그것이 애초의 시도였습니다.</p>
-      <p style="margin-top:12px">작·연출 <b>채승훈</b></p>
+      <p class="note-credit">작·연출 <b>채승훈</b></p>
     </div>
-    <p class="note-quote" style="margin-top:48px">
+    <p class="note-quote note-main">
       아마도 궁금해질 테지요.<br>
       배우가 배역의 안팎을 오가는 이유를,<br>
       니나가 죽었다 깨어나기를<br class="br-mobile">반복하는 이유를,<br>
@@ -370,7 +390,7 @@
 <footer>
   <div class="wrap">
     <p>극단 창파 · 2026 정기공연 《불굴의 니나》</p>
-    <p style="margin-top:8px">문의 인스타그램 <a href="https://www.instagram.com/theater_changpa" target="_blank" rel="noopener" class="ig">@theater_changpa</a></p>
+    <p class="contact">문의 인스타그램 <a href="https://www.instagram.com/theater_changpa" target="_blank" rel="noopener" class="ig">@theater_changpa</a></p>
     <p class="support">후원 한국메세나협회 · 한국문화예술위원회</p>
 
     <div class="changpa-gate">
